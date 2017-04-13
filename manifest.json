@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Remedy Inventory Manager",
+  "description": "This extension will dynamically search for HP hardware and log it to BMC Remedy's Asset inventory.",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://partsurfer.hp.com/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "contentscript.js"
+      ]
+    }
+  ]
+}
